@@ -1,0 +1,7 @@
+CREATE PROCEDURE spGetHolidaysbyId @country_id int
+AS
+select holiday_date  from PublicHolidays WHERE country_id = @country_id
+GO;
+
+EXEC spGetHolidaysbyId @country_id = 1
+

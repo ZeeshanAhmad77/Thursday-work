@@ -1,0 +1,12 @@
+select name_of_day from weekendDays
+where country_Id = 1
+
+select * from country
+Where country_id = 1
+
+select country_id,name from country
+
+select * from PublicHolidays
+WHERE country_Id = 1
+
+SELECT * FROM country

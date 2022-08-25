@@ -1,0 +1,8 @@
+CREATE PROCEDURE spGetWeekedDaysById  @country_id int
+AS
+select name_of_day from weekendDays
+WHERE country_id = @country_id
+GO;
+
+
+EXEC spGetWeekedDaysById @country_id = 1

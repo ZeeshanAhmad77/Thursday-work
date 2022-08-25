@@ -1,0 +1,43 @@
+<h1>Instructions</h1>
+<!-- The drop down present on the instruction page -->
+<form [formGroup]="selectCountryForm">
+<label style="font-weight: bold;"> Select Country</label>
+<select #countries name="countries" class="form-control"  formControlName="country" value="0" >
+  <option value="0"> --select--</option>
+  <option *ngFor="let countryInfo of listOfCountries" [value]="countryInfo.countryId" >
+    {{countryInfo.name}}
+  </option>
+</select>
+<!-- button pressent on the instrction page oet instructions -->
+<div class="calculate">
+  <button
+    type="button"
+    class="btn btn-primary"
+    (click)="SelectedCountry()"
+    [disabled]="!selectCountryForm.valid"
+   >Get Instrctions</button>
+</div>
+</form>
+<!-- This part is to show the instruction of selected country  -->
+<div *ngIf="showInstructions">
+  <h6 style="margin:20px">The instructions are listed Below</h6>
+  <ol class="list-group list-group-numbered" >
+    <li class="list-group-item">
+       <p> The Selected Country <b> {{countryDetails.name}} </b> has wekkends on these two dates stated below:  </p>
+    </li>
+      <div *ngFor="let weekend of countryDetails.weekends"><b>{{weekend}}</b></div>
+      <li class="list-group-item">
+        <p>Weeekends and Public Holidays are not includes in business days</p>
+      </li>
+      <li class="list-group-item">
+        A book should be returned in 10 days. Any business day after <b>10</b>  days will be considered as a late day.
+      </li>
+    <li class="list-group-item">
+      <p>The Due  date charges for each late day is <b> {{countryDetails.dueDateCharges}} {{countryDetails.currency}}</b></p>
+    </li>
+    <li class="list-group-item">
+      <p>There is a special tax of <b>{{countryDetails.taxPercentage}}</b> % for each penalty day. </p>
+     </li>
+
+  </ol>
+</div>

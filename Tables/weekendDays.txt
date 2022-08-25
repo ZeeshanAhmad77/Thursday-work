@@ -1,0 +1,9 @@
+CREATE TABLE weekendDays(
+    [Pk_id] [int] IDENTITY(1,1) PRIMARY KEY,
+    [name_of_day] varchar(20) NOT NULL,
+	country_Id int foreign key references Country(Country_Id)
+);
+INSERT INTO weekendDays( [name_of_day], country_Id)
+VALUES
+('saturday', 2)
+,('friday', 2)

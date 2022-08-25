@@ -1,0 +1,81 @@
+
+
+<h1 class="heading"> Enter The Details</h1>
+<!-- Form Shown On Home Page -->
+<form [formGroup]="inputDatesForm">
+  <div class="form-group">
+    <label> Book checked out Date</label>
+    <input type="date" class="form-control" formControlName="checkedOutDate">
+  </div>
+  <div class="form-group">
+    <label> Book Returned Date</label>
+    <input type="date" class="form-control" formControlName="returedDate">
+  </div>
+  <label> Select Country</label>
+  <div>
+    <select #countries name="countries" class="form-control" formControlName="country" value="0">
+      <option value="0"> --select--</option>
+      <option *ngFor="let countryInfo of listOfCountries" [value]="countryInfo.countryId">
+        {{countryInfo.name}}
+      </option>
+    </select>
+  </div>
+<!-- Calculate button -->
+  <div
+      class="calculate">
+      <button type="button"
+      class="btn btn-primary"
+      (click)="calculate()"
+      [disabled]="!inputDatesForm.valid"
+    >Calculate</button>
+  </div>
+
+</form>
+  <!-- The Details Would be shown after clicking on Calclate button -->
+<div *ngIf="showCalculation">
+  <ul class="list-group">
+    <li class="list-group-item">
+      <b>Business Days :</b> {{this.penaltyInfo.businessDays}}
+    </li>
+    <li class="list-group-item">
+      <b>Penalty for the inputs :</b> {{this.penaltyInfo.totalAmount.toFixed(2)}} {{this.countryDetails.currency}}
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+<!--<div class="container" style="width:30%">
+  <h1> Enter Employee Details</h1>
+  <form [formGroup]="employeeForm" (submit)="formData()">
+
+    <div class="mb-3">
+      <label for="inputName" class="form-label">Name</label>
+      <input type="text" class="form-control" id="inputName" formControlName="Name">
+      <span *ngIf="employeeForm.get('Name')?.touched && employeeForm.get('Name')?.hasError('required')">Enter Name</span>
+      <span *ngIf="employeeForm.get('Name')?.touched && employeeForm.get('Name')?.hasError('minlength')">Minumum 2 character Required</span>
+      <span *ngIf="employeeForm.get('Name')?.touched && employeeForm.get('Name')?.hasError('maxlength')">Minumum 2o character Required</span>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="Email">
+      <span *ngIf="employeeForm.get('Email')?.touched && employeeForm.get('Email')?.hasError('required')">Enter Email Adress</span>
+      <span *ngIf="employeeForm.get('Email')?.touched && employeeForm.get('Email')?.hasError('email')">Enter  valid Email Adress</span>
+      <span *ngIf="employeeForm.get('Email')?.touched && employeeForm.get('Email')?.hasError('minlength')">Minumum 2 character Required</span>
+      <span *ngIf="employeeForm.get('Email')?.touched && employeeForm.get('Email')?.hasError('maxlength')">Minumum 2o character Required</span>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Adress</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" formControlName="Adress">
+      <span *ngIf="employeeForm.get('Adress')?.touched && employeeForm.get('Adress')?.hasError('required')">Enter  Adress</span>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-primary" style="margin-right: 10px;" [disabled]="!employeeForm.valid">Save</button>
+      <button type="submit" class="btn btn-danger">Cancel</button>
+    </div>
+
+
+  </form>
+</div>-->

@@ -1,0 +1,5 @@
+CREATE PROCEDURE spGetCountry 
+AS
+select country_id,[name] from country
+GO;
+EXEC spGetCountry 

@@ -1,0 +1,6 @@
+CREATE PROCEDURE spGetCountrybyId @country_id int
+AS
+SELECT * FROM country WHERE country_id = @country_id
+GO;
+
+EXEC spGetCountrybyId @country_id = 1

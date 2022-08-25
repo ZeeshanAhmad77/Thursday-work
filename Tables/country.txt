@@ -1,0 +1,13 @@
+drop table country
+CREATE TABLE country(
+    [country_id] [int] IDENTITY(1,1) PRIMARY KEY,
+    [name] [varchar](20) unique  NOT NULL,
+    [currency] [varchar](20) NOT NULL,
+	[special_tax] decimal NOT NULL,
+	[due_date_charges] decimal NOT NULL
+  
+);
+INSERT INTO country( [name],[currency],[special_tax],[due_date_charges])
+VALUES ('pakistan','PKR','0.00','50.00'),('UAE','AED','8.00','50.00');
+
+select * from country

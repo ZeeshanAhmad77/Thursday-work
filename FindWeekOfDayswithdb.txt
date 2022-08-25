@@ -1,0 +1,84 @@
+// This example demonstrates the DateTime.DayOfWeek property
+using System;
+using System.Collections.Generic;
+class Sample
+{
+    public static double GetWeekDays(DateTime startD, DateTime endD,List<string> listOfWeeked)
+{
+    double calcWeekDays = 1 + ((endD - startD).TotalDays * 5 -(startD.DayOfWeek - endD.DayOfWeek) * 2) / 7;
+    foreach (string weekend in listOfWeeked)
+    {
+        
+switch (weekend) 
+{
+  case "monday":
+    {
+        if (endD.DayOfWeek == DayOfWeek.Monday)  calcWeekDays--;
+        if (startD.DayOfWeek == DayOfWeek.Monday)calcWeekDays--;
+    }
+    break;
+  case "tuesday":
+    {
+        if (endD.DayOfWeek == DayOfWeek.Tuesday)  calcWeekDays--;
+        if (startD.DayOfWeek == DayOfWeek.Tuesday)calcWeekDays--;
+    }
+    break;
+  case "wednesday":
+    {
+        if (endD.DayOfWeek == DayOfWeek.Wednesday)  calcWeekDays--;
+        if (startD.DayOfWeek == DayOfWeek.Wednesday)calcWeekDays--;
+    }
+    break;
+  case "thursday":
+    {
+        if (endD.DayOfWeek == DayOfWeek.Thursday)  calcWeekDays--;
+        if (startD.DayOfWeek == DayOfWeek.Thursday)calcWeekDays--;
+    }
+    break;
+  case "friday":
+    {
+        if (endD.DayOfWeek == DayOfWeek.Friday)  calcWeekDays--;
+        if (startD.DayOfWeek == DayOfWeek.Friday)calcWeekDays--;
+    }
+    break;
+  case "saturday":
+    {
+        if (endD.DayOfWeek == DayOfWeek.Saturday)  calcWeekDays--;
+        if (startD.DayOfWeek == DayOfWeek.Saturday)calcWeekDays--;
+    }
+    break;
+  case "sunday":
+    {
+        if (endD.DayOfWeek == DayOfWeek.Sunday)  calcWeekDays--;
+        if (startD.DayOfWeek == DayOfWeek.Sunday)calcWeekDays--;
+    }
+    break;
+} 
+
+  
+    }
+    
+    
+   
+
+    return calcWeekDays;
+ }
+    public static void Main()
+    {
+         var checkedOutDate = DateTime.Parse("08/07/2022");
+         var  returnedDate= DateTime.Parse("08/13/2022");
+         Console.WriteLine("The day of the week "+DayOfWeek.Monday);
+            Sample testObject=new Sample();
+            List<string> lidtOfWeekends=new List<string>();
+            lidtOfWeekends.Add("saturday");
+            lidtOfWeekends.Add("sunday");
+            foreach(string weekend in lidtOfWeekends)
+            {
+                Console.WriteLine("Weekends :  "+weekend);
+            }
+  
+           double days= GetWeekDays(checkedOutDate,returnedDate,lidtOfWeekends);
+            Console.WriteLine("business Days :  "+days);
+
+    }
+}

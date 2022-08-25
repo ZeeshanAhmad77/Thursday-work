@@ -1,0 +1,111 @@
+CREATE TABLE PublicHolidays(
+    [holiday_id] [int] IDENTITY(1,1) PRIMARY KEY,
+    [holiday_date] [date] NOT NULL,
+    [holiday_name] [varchar](100) NOT NULL,
+	[country_Id] int foreign key REFERENCES country(country_Id)
+);
+
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('New Year's Day','2022-01-01','1');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Kashmir Day','2022-02-05','1');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Shab e-Meraj','2022-03-01','1');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Shab e-Barat','2022-03-18','1');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Pakistan Day','2022-03-23','1');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Labour Day','2022-05-01','1');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Eid-ul-Fitr Holiday','2022-05-02','1');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Eid-ul-Fitr Holiday','2022-05-03','1');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Eid-ul-Fitr Holiday','2022-05-04','1');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Eid-ul-Fitr Holiday','2022-05-05','1');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Eid al-Adha','2022-07-08','1');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Eid al-Adha','2022-07-09','1');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Eid al-Adha','2022-07-10','1');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Eid al-Adha','2022-07-11','1');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Eid al-Adha','2022-07-12','1');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Ashura Holidays','2022-08-08','1');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Ashura Holidays','2022-08-09','1');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Independace day','2022-08-14','1');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Defence Day','2022-09-06','1');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Chehlum','2022-09-17','1');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Eid Milad un-Nabi','2022-10-09','1');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Iqbal Day','2022-11-09','1');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Quaid-e-Azam Day','2022-12-25','1');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Eve of new Year','2022-12-31','1');
+
+
+//Public Holidays for UAE
+
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('New Year Day','2022-01-01','2');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('New Year Day Holiday','2022-01-02','2');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Leilat al-Meiraj','2022-03-01','2');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Ramadan Start','2022-04-02','2');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Eid al-Fitr Holiday','2022-04-30','2');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Eid al-Fitr Holiday','2022-05-01','2');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Eid al-Fitr Holiday','2022-05-02','2');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Eid al-Fitr Holiday','2022-05-03','2');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Eid al-Fitr Holiday','2022-05-04','2');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Eid al-Fitr Holiday','2022-05-05','2');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Eid al-Fitr Holiday','2022-05-06','2');
+
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Public Holiday (Death of Sheikh Khalifa )','2022-05-14','2');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Public Holiday (Death of Sheikh Khalifa )','2022-05-15','2');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Public Holiday (Death of Sheikh Khalifa )','2022-05-16','2');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Hajj season begins','2022-06-30','2');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Arafat (Hajj) Day','2022-07-08','2');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Eid al-Adha','2022-07-09','2');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Eid al-Adha','2022-07-10','2');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Eid al-Adha','2022-07-11','2');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Mouloud','2022-10-08','2');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('Commemoration Day'2022-12-01','2');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('National Day','2022-12-02','2');
+INSERT INTO PublicHolidays( [holiday_name] ,[holiday_date],[country_Id])
+VALUES ('New Year Eve','2022-12-31','2');
+
+
+
+
+SELECT * FROM PublicHolidays
