@@ -24,8 +24,11 @@
   <ol class="list-group list-group-numbered" >
     <li class="list-group-item">
        <p> The Selected Country <b> {{countryDetails.name}} </b> has wekkends on these two dates stated below:  </p>
-    </li>
+    </li> 
+    <li class="list-group-item"> 
       <div *ngFor="let weekend of countryDetails.weekends"><b>{{weekend}}</b></div>
+    </li>
+      
       <li class="list-group-item">
         <p>Weeekends and Public Holidays are not includes in business days</p>
       </li>

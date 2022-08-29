@@ -5,6 +5,7 @@ namespace WebApplication1.Models
 {
     public class CountryInfo
     {
+        
         public int CountryId { get; set; }
         public string Name { get; set; }
         public string Currency { get; set; }

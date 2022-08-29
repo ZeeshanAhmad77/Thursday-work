@@ -8,11 +8,15 @@ namespace WebApplication1.Controllers
     [ApiController]
     public class CountryController : ControllerBase
     {
+        // Dependency Injection for the   for the business layers
+
         private ICountry _countryManager;
         public CountryController(ICountry countryManager)
         {
             _countryManager = countryManager;
         }
+
+        // Get List of All countries
 
         [HttpGet]
         [Route("GetListofCountries")]
@@ -29,7 +33,7 @@ namespace WebApplication1.Controllers
             }
             
         }
-
+        // Get Info  of a country by Id
         [HttpGet]
         [Route("GetCountryInfo")]
         public IActionResult Get(int countryId)

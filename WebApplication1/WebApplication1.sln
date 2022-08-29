@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebApplication1.csproj", "{DD71B4C3-235F-4EBC-A84A-16919D8D3BD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPenaltyCalculator", "..\TestPenaltyCalculator\TestPenaltyCalculator.csproj", "{B0EF001B-8C55-49D8-810E-E40A1AED5F30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestPenaltyCalculator", "..\TestPenaltyCalculator\TestPenaltyCalculator.csproj", "{B0EF001B-8C55-49D8-810E-E40A1AED5F30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PenaltycalculatorTest1", "..\PenaltycalculatorTest1\PenaltycalculatorTest1.csproj", "{E636C3F7-5550-491B-B893-41EE65B56025}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B0EF001B-8C55-49D8-810E-E40A1AED5F30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0EF001B-8C55-49D8-810E-E40A1AED5F30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0EF001B-8C55-49D8-810E-E40A1AED5F30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E636C3F7-5550-491B-B893-41EE65B56025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E636C3F7-5550-491B-B893-41EE65B56025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E636C3F7-5550-491B-B893-41EE65B56025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E636C3F7-5550-491B-B893-41EE65B56025}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
